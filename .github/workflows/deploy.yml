@@ -38,7 +38,7 @@ jobs:
 
       - name: Seite mit Pagecrypt verschlüsseln
         run: |
-          npm install -g @pagecrypt/core
+          npm install -g pagecrypt
           # Alle HTML-Dateien verschlüsseln
           find _site -name "*.html" -type f | while read file; do
             pagecrypt "$file" "$file" --password "$SITE_PASSWORD"
